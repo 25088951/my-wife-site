@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Confirm 💜</title>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="box">
+<h1>Confirm Our Date 🧸</h1>
+
+<button onclick="send()" class="bigBtn">Send 💜</button>
+</div>
+
+<div class="float">🧸💜❤️🧸💜❤️🧸💜</div>
+
+<script>
+emailjs.init("YOUR_PUBLIC_KEY");
+
+function send(){
+
+const date = localStorage.getItem("date");
+const time = localStorage.getItem("time");
+const food = localStorage.getItem("food");
+
+emailjs.send(
+"YOUR_SERVICE_ID",
+"YOUR_TEMPLATE_ID",
+{
+date,
+time,
+food
+}
+).then(() => {
+alert("💜 Date Sent Successfully!");
+window.location.href = "index.html";
+});
+}
+</script>
+
+</body>
+</html>
