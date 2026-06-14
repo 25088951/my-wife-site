@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Food </title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="box">
+<h1>What should we eat? </h1>
+
+<select id="food">
+<option>Pizza 🍕</option>
+<option>Burger 🍔</option>
+<option>D**k </option>
+<option>Ice Cream 🍦</option>
+<option>Anything you want </option>
+<option>Surprise me 😏</option>
+</select>
+
+<button onclick="next()">Next 💜</button>
+</div>
+
+<script>
+function next(){
+localStorage.setItem("food", document.getElementById("food").value);
+window.location.href = "confirm.html";
+}
+</script>
+
+</body>
+</html>
